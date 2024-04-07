@@ -1226,6 +1226,7 @@ img {
     border: none;
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 16px;
 }
 
 .btn-footer:hover,
@@ -1246,6 +1247,7 @@ img {
         display: flex;
         flex-wrap: wrap;
         align-items: baseline;
+        max-width: 530px;
     }
 
     .logo-paragraph {
