@@ -1246,7 +1246,6 @@ img {
         display: flex;
         flex-wrap: wrap;
         align-items: baseline;
-        max-width: 530px;
     }
 
     .logo-paragraph {
