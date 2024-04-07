@@ -1249,6 +1249,10 @@ img {
         align-items: baseline;
         max-width: 530px;
     }
+    /*
+    .footer-container {
+        max-width: 530px;
+    }*/
 
     .logo-paragraph {
         width: 264px;
