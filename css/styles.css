@@ -115,7 +115,7 @@ img {
     display: none;
 }
 
-.open-menu-btn {
+.menu-btn {
     padding: 0;
     line-height: 0;
     border-color: transparent;
@@ -124,9 +124,9 @@ img {
 }
 
 @media screen and (min-width: 768px) {
-    .open-menu-btn {
+    /*.open-menu-btn {
         display: none;
-    }
+    }*/
 
     .page-nav {
         display: flex;
@@ -251,6 +251,7 @@ img {
         fill: #e7e9fc;
         stroke-width: 1px;
         stroke: #2e2f42;
+        flex-shrink: 0;
     }
 
     .mobile-menu-close-icon {
@@ -259,16 +260,16 @@ img {
 
     .mobile-menu-container {
         position: relative;
+        height: 100;
+        display: flex;
+        flex-direction: column;
     }
 }
 
 .mobile-nav-menu {
-    display: inline-block;
-    margin-top: 72px;
-    margin-bottom: 168px;
-    min-width: 151px;
     margin-left: 0;
-
+    margin-bottom: auto;
+    padding: 72px 16px 40px;
 }
 
 .mob-menu-link {
@@ -649,7 +650,7 @@ img {
 .hero {
     max-width: 320px;
     min-height: 432px;
-    background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url('../images/people-office1.jpg');
+    background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url('../images/Desktop/people-office-desktop.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -660,7 +661,7 @@ img {
 
 @media screen and (min-resolution: 192dpi) {
     .hero {
-        background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url('../images/people-office1.jpg');
+        background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url('../images/Desktop/people-office-desktop.jpg');
     }
 }
 
@@ -871,7 +872,7 @@ img {
 
 .team-section {
     background-color: #f4f4fd;
-    padding: 96px 12px;
+    padding: 96px 0px;
 }
 
 .team-person {
@@ -909,6 +910,7 @@ img {
     display: flex;
     flex-wrap: wrap;
     row-gap: 72px;
+    justify-content: center;
 }
 
 .social-list-link {
@@ -1133,10 +1135,6 @@ img {
     text-align: center;
 }
 
-.social-links-box {
-    margin-bottom: 72px;
-}
-
 .social-list-link-footer {
     display: flex;
     gap: 16px;
@@ -1192,7 +1190,6 @@ img {
     background-color: transparent;
     padding-left: 16px;
     transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    margin-bottom: 16px;
 }
 
 .sbscr-input::placeholder {
@@ -1202,7 +1199,9 @@ img {
     letter-spacing: 0.04em;
     color: #fff;
 }
-
+.sbscr-input-lbl {
+    margin-bottom: 16px;
+}
 .sbscr-input:focus {
     border-color: #4d5ae5;
 }
@@ -1247,12 +1246,12 @@ img {
         display: flex;
         flex-wrap: wrap;
         align-items: baseline;
+        max-width: 530px;
     }
 
     .logo-paragraph {
         width: 264px;
         margin-right: 24px;
-        margin-left: 96px;
     }
 
     .logo-footer {
@@ -1272,10 +1271,6 @@ img {
 
     .sbscr-title {
         text-align: left;
-    }
-
-    .subscribe-footer {
-        margin-left: 96px;
     }
 
     .sbscr-input-btn {
