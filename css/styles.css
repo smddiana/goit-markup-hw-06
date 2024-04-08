@@ -99,11 +99,9 @@ img {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 16px;
 }
 
 .page-header {
-    height: 80px;
     border-bottom: 1px solid #e7e9fc;
     box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
 }
@@ -123,11 +121,15 @@ img {
     cursor: pointer;
     border: none;
 }
-
+.open-menu-btn {
+    display: block;
+    border: none;
+    background: none;
+}
 @media screen and (min-width: 768px) {
-    /*.open-menu-btn {
+    .open-menu-btn {
         display: none;
-    }*/
+    }
 
     .page-nav {
         display: flex;
@@ -150,6 +152,7 @@ img {
         letter-spacing: 0.02em;
         color: #2e2f42;
         padding: 24px 0;
+        display: block;
     }
 
     .menu-link:hover,
@@ -261,16 +264,17 @@ img {
 
     .mobile-menu-container {
         position: relative;
-        height: 100;
+        height: 100%;
         display: flex;
         flex-direction: column;
+        padding: 72px 16px 40px;
     }
+    
 }
 
 .mobile-nav-menu {
     margin-left: 0;
     margin-bottom: auto;
-    padding: 72px 16px 40px;
 }
 
 .mob-menu-link {
@@ -301,10 +305,10 @@ img {
 }
 
 .mobile-address-menu {
-    display: block;
-    min-width: 193px;
-    margin-bottom: 48px;
     margin-left: 0;
+}
+.mobile-address-nav {
+    margin-bottom: 48px ;
 }
 
 .mobile-address-item {
@@ -336,7 +340,6 @@ img {
 .social-list-mob-menu {
     display: flex;
     gap: 40px;
-    margin: 0 8px 40px 0;
 }
 
 .social-list-icon-mob-menu {
@@ -651,7 +654,7 @@ img {
 .hero {
     max-width: 320px;
     min-height: 432px;
-    background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url('../images/Desktop/people-office-desktop.jpg');
+    background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url('../images/Mobile/Dark-bg-mobile.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -662,7 +665,7 @@ img {
 
 @media screen and (min-resolution: 192dpi) {
     .hero {
-        background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url('../images/Desktop/people-office-desktop.jpg');
+        background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url('../images/Mobile/Dark-bg-mobile@2x.jpg');
     }
 }
 
@@ -1131,10 +1134,9 @@ img {
     line-height: 1.5;
     letter-spacing: 0.02em;
     color: #fff;
-    padding-left: 56px;
-    padding-right: 56px;
     text-align: center;
 }
+
 
 .social-list-link-footer {
     display: flex;
@@ -1147,7 +1149,9 @@ img {
     width: 40px;
     height: 40px;
 }
-
+.social-links-box {
+    margin-bottom: 72px;
+}
 .social-list-link-item-footer {
     width: 100%;
     height: 100%;
@@ -1227,7 +1231,7 @@ img {
     border: none;
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 16px;
+    margin-top: 16px;
 }
 
 .btn-footer:hover,
@@ -1238,7 +1242,16 @@ img {
 .sbscr-btn-icon {
     margin-left: 16px;
 }
-
+@media only screen and (min-width: 768px) {
+    .btn-footer {
+        margin-top: 0;
+    }
+}
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+    .footer-item .footer-container {
+        max-width: 530px;
+    }
+}
 @media screen and (min-width: 768px) {
     .logo-footer {
         text-align: start;
@@ -1248,7 +1261,6 @@ img {
         display: flex;
         flex-wrap: wrap;
         align-items: baseline;
-        max-width: 530px;
     }
     /*
     .footer-container {
@@ -1297,8 +1309,8 @@ img {
     }
 
     .social-links-box {
-        margin-right: 80px;
         margin-bottom: 0;
+        margin-right: 80px;
     }
 
     .subscribe-footer {
