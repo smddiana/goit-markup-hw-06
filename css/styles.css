@@ -27,6 +27,7 @@ a {
     text-decoration: none;
     color: inherit;
 }
+
 button {
     cursor: pointer;
 }
@@ -64,7 +65,7 @@ img {
     margin: 0 auto;
 }
 
-@media screen and (min-width:767px) {
+@media screen and (min-width: 768px) {
     .container {
         max-width: 768px;
     }
@@ -98,9 +99,11 @@ img {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding: 16px;
 }
 
 .page-header {
+    height: 80px;
     border-bottom: 1px solid #e7e9fc;
     box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
 }
@@ -113,18 +116,18 @@ img {
     display: none;
 }
 
-.open-menu-btn {
+.menu-btn {
     padding: 0;
     line-height: 0;
+    border-color: transparent;
+    cursor: pointer;
     border: none;
-}
-.svg-open-menu-btn {
 }
 
 @media screen and (min-width: 768px) {
-    .open-menu-btn {
+    /*.open-menu-btn {
         display: none;
-    }
+    }*/
 
     .page-nav {
         display: flex;
@@ -141,7 +144,6 @@ img {
     }
 
     .menu-link {
-        display: block;
         font-weight: 500;
         font-size: 16px;
         line-height: 1.5;
@@ -217,7 +219,7 @@ img {
 }
 
 /* ==============Mobile menu styles========================== */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
     .mobile-menu {
         position: fixed;
         top: 0;
@@ -226,11 +228,11 @@ img {
         width: 100%;
         height: 100%;
         background-color: #fff;
+
         opacity: 0;
         visibility: hidden;
         transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
     }
-
 
     .mobile-menu.is-open {
         opacity: 1;
@@ -259,18 +261,17 @@ img {
 
     .mobile-menu-container {
         position: relative;
-        height: 100%;
+        height: 100;
         display: flex;
         flex-direction: column;
-        padding: 72px 16px 40px;
     }
 }
 
 .mobile-nav-menu {
     margin-left: 0;
     margin-bottom: auto;
+    padding: 72px 16px 40px;
 }
-
 
 .mob-menu-link {
     font-weight: 700;
@@ -300,10 +301,10 @@ img {
 }
 
 .mobile-address-menu {
-    margin-left: 0;
-}
-.mobile-address-nav {
+    display: block;
+    min-width: 193px;
     margin-bottom: 48px;
+    margin-left: 0;
 }
 
 .mobile-address-item {
@@ -335,6 +336,7 @@ img {
 .social-list-mob-menu {
     display: flex;
     gap: 40px;
+    margin: 0 8px 40px 0;
 }
 
 .social-list-icon-mob-menu {
@@ -649,7 +651,7 @@ img {
 .hero {
     max-width: 320px;
     min-height: 432px;
-    background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url('../images/Mobile/Dark-bg-mobile.jpg');
+    background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url('../images/Desktop/people-office-desktop.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -658,9 +660,10 @@ img {
     padding: 72px 0;
 }
 
-
-@media only screen and (min-resolution: 192dpi) and (max-width: 767px) {
-    .hero {background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url('../images/Mobile/Dark-bg-mobile@2x.jpg');}
+@media screen and (min-resolution: 192dpi) {
+    .hero {
+        background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url('../images/Desktop/people-office-desktop.jpg');
+    }
 }
 
 .main-title {
@@ -708,7 +711,7 @@ img {
         padding: 112px 0;
     }
 
-   @media only screen and (min-resolution: 192dpi) and (min-width: 768px) {
+    @media screen and (min-resolution: 192dpi) {
         .hero {
             max-width: 768px;
             background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url('../images/Tablet/Dark-bg-tablet@2x.jpg');
@@ -732,7 +735,7 @@ img {
         padding: 188px 0;
     }
 
-        @media only screen and (min-resolution: 192dpi) and (min-width: 1158px) {
+    @media screen and (min-resolution: 192dpi) {
         .hero {
             background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url('../images/Desktop/people-office-desktop@2x.jpg');
         }
@@ -1128,6 +1131,8 @@ img {
     line-height: 1.5;
     letter-spacing: 0.02em;
     color: #fff;
+    padding-left: 56px;
+    padding-right: 56px;
     text-align: center;
 }
 
@@ -1222,7 +1227,7 @@ img {
     border: none;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 16px;
+    margin-bottom: 16px;
 }
 
 .btn-footer:hover,
@@ -1243,7 +1248,12 @@ img {
         display: flex;
         flex-wrap: wrap;
         align-items: baseline;
+        max-width: 530px;
     }
+    /*
+    .footer-container {
+        max-width: 530px;
+    }*/
 
     .logo-paragraph {
         width: 264px;
@@ -1273,13 +1283,6 @@ img {
         display: flex;
         gap: 24px;
     }
-    .btn-footer {
-        margin-top: 0;
-        }
-    
-}
-.social-links-box {
-    margin-bottom: 72px;
 }
 
 @media screen and (min-width: 1158px) {
